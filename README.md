@@ -18,7 +18,7 @@ The advantage of using network monitoring alongside the [CodeQL Source Code anal
 
 Currently we support the following protocols and captures:
 
-* TLS Handshake data for all TLS versions, inc. proposed ciphersuites and accepted ciphersuites, across several ports:
+* TLS Handshake data for all TLS versions, inc. proposed Cipher Suites and accepted Cipher Suites, across several ports:
   * 443 (https)
   * 990 (sftp)
   * 3389 (rdp)
@@ -107,7 +107,7 @@ A TLS client capture example:
     "TLSv1.2"
     ],
     "ciphersuites": [
-    "TLS_AES_128_GCM_SHA256",
+    "TLS_AES_128_CCM_8_SHA256",
     "TLS_CHACHA20_POLY1305_SHA256",
     "TLS_AES_256_GCM_SHA384",
     "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
@@ -115,15 +115,16 @@ A TLS client capture example:
     "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
     "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
     "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
-    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
-    "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
-    "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA",
-    "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA",
-    "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
-    "TLS_RSA_WITH_AES_128_GCM_SHA256",
+    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",  
     "TLS_RSA_WITH_AES_256_GCM_SHA384",
-    "TLS_RSA_WITH_AES_128_CBC_SHA",
-    "TLS_RSA_WITH_AES_256_CBC_SHA"
+    "TLS_AES_128_CCM_8_SHA256",
+    "TLS_AES_128_CCM_SHA256",
+    "TLS_ECDHE_ECDSA_WITH_AES_128_CCM",
+    "TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8",
+    "TLS_ECDHE_ECDSA_WITH_AES_256_CCM",
+    "TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8",
+    "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+    "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
     ],
     "EtM": false,
     "hostname": "ping.chartbeat.net",
